@@ -12,6 +12,8 @@ return {
             vim.keymap.set("n", "<leader>gc", ":Git commit", {desc = "[G]it [C]ommit"})
             -- Set a vim motion to <Space> + g + p to push the commited changes to the remote repository
             vim.keymap.set("n", "<leader>gp", "Git push", {desc = "[G]it [P]ush"})
+            -- Set a vim motion to <Space> + g + l to show commit history.
+            vim.keymap.set("n", "<leader>gl", ":Git log <cr>", { desc = "Git log"})
         end
     }
 }
