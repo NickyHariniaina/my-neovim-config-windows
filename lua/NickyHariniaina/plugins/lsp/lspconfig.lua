@@ -72,4 +72,5 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
   end,
+require("plugins.lsp.jdtls").setup_jdtls()
 }

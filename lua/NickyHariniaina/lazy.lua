@@ -7,7 +7,18 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
+local opts = {
+	change_detection = {
+		-- Don't notify us every time a change is made to the configuration
+		notify = false,
+	},
+	checker = {
+		-- Automatically check for package updates
+		enabled = true,
+		-- Don't spam us with notification every time there is an update available
+		notify = false,
+	},
+}
 require("lazy").setup({
   { import = "NickyHariniaina.plugins" },
-})
+}, opts)
