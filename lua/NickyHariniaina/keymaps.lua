@@ -43,3 +43,4 @@ keymap.set("n", "<C-h>", "<C-w>w")
 
 -- Open terminal
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Open terminale"} )
+

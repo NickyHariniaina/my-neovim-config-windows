@@ -71,6 +71,11 @@ return {
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
+    -- used to enable autocompletion (assign to every lsp server config)
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+    require("lspconfig").jdtls.setup({
+      capabilities = capabilities,
+    })
   end,
-require("plugins.lsp.jdtls").setup_jdtls()
 }
