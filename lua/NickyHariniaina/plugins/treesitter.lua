@@ -4,6 +4,7 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "windwp/nvim-ts-autotag",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()
     -- import nvim-treesitter plugin
@@ -17,7 +18,6 @@ return {
       -- enable indentation
       indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
-
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
@@ -40,6 +40,7 @@ return {
         "query",
         "vimdoc",
         "c",
+        "java",
       },
       incremental_selection = {
         enable = true,
@@ -50,7 +51,17 @@ return {
           node_decremental = "<bs>",
         },
       },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+          },
+        },
+      },
     })
   end,
-  require('nvim-ts-autotag').setup()
+ require('nvim-ts-autotag').setup()
 }

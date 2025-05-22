@@ -10,7 +10,6 @@ local keymap = vim.keymap -- for conciseness
 
 -- Go up and down
 keymap.set("n", "t", "k")
-keymap.set("n", "n", "j")
 
 -- Invert b and f for window scrolling
 keymap.set("n", "<C-f>", "<C-b>")
