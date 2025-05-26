@@ -1,4 +1,4 @@
-                                                                                     
+
 -- set leader key to space
 vim.g.mapleader = " "
 
@@ -8,6 +8,17 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
+-- OPTIONAL: Disable arrow keys in normal mode
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('i', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('i', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('i', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('i', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+-- Exit Vim's terminal mode
+keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- Go up and down
 keymap.set("n", "t", "k")
 

@@ -1,19 +1,24 @@
+
 vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt -- for conciseness
 
+opt.scrolloff = 10 -- number of lines to keep above/below cursor
 -- Disable mouse so i cannot use it, useful to learn vim motion quickly
-opt.mouse = ""
+opt.mouse = "" -- enable mouse support
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
-
+opt.undofile = true
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
+opt.shiftwidth = 2 -- number of spaces inserted for each indentation level
+opt.tabstop = 2 -- number of spaces inserted for tab character
+opt.softtabstop = 2 -- number of spaces inserted for <Tab> key
+opt.smartindent = true -- enable smart indentation
+opt.breakindent = true -- enable line breaking indentation
 -- line wrapping
 opt.wrap = false -- disable line wrapping
 
