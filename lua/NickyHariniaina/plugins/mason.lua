@@ -42,6 +42,7 @@ return {
 				"ts_ls",
 				"yamlls",
 			},
+			automatic_enable = true,
 			-- List des serveurs possibles : https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 			-- Vous pouvez ne pas en mettre ici et tout installer en utilisant :Mason
 			-- Mais au lieu de passer par :Mason pour installer, je vous recommande d'ajouter une entrée à cette liste
